@@ -125,10 +125,13 @@ netTotal = netTotal + (finances[i][1])
 //Display the net total amount of profit/losses
 console.log("Total: £" + netTotal);
 
-
 //The average of the changes in Profit/Losses over the entire period.
 
 //You will need to track what the total change in profits is from month to month and then find the average. (Total/Number of months)
+
+// calculate average netTotal/motnhs
+var changeAvg = (netTotal/finances.length);
+console.log ("Average Change: " + changeAvg);
 
 //The greatest increase in profits (date and amount) over the entire period.
 
