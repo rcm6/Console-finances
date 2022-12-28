@@ -140,7 +140,35 @@ var changeAvg = (netTotal/finances.length);
 //Display the average rounded to 2 decimal places
 console.log ("Average Change: £" + Math.round((changeAvg + Number.EPSILON) * 100) / 100);
 
+// https://www.w3schools.com/js/js_array_sort.asp
+//Sort array numerically from lowest to highest
+//numeric sort example points.sort(function(a, b){return a - b});
+
+//Sort array numerically from highest to lowest
+//points.sort(function(a, b){return b - a});
+
+//sorting an array of arrays
+//https://www.codingem.com/javascript-sort-an-array-of-arrays/
+//sorting array of arrays example data.sort((a, b) => b[1] - a[1])
+//The sort() function applies a comparison function to the array that takes two arguments a and b. (The arrow syntax lets you omit the function and return keywords and the curly braces.)
+//This time a and b are not numbers, but arrays.
+//To sort the array of arrays, you need to specify based on which element you want to sort them.
+//Here we compare the arrays by their second elements.
+//Then the sort() function loops through the array of arrays and sorts it based on the magnitude of the second elements.
+
+//Testing
+/* var fSortTest = finances.sort((a, b) => b[1] - a[1])
+console.log("sorttest " + fSortTest[0]);*/
+
+//Sort finances array by highest to lowest
+var financesSorted = (finances.sort ((a, b) => b[1]-a[1]));
 
 //The greatest increase in profits (date and amount) over the entire period.
 
+//Display first position [0][0]/[0][1]
+console.log("Greatest Increase in Profits: " + (financesSorted[0][0]) + " (£" + (financesSorted[0][1]) + ")");
+
 //The greatest decrease in losses (date and amount) over the entire period.
+
+//Display last position [length of finance array -1][0]/[length of finance array -1][1]
+console.log("Greatest Decrease in Profits: " + (financesSorted[finances.length -1][0]) + " (£" + (financesSorted[finances.length -1][1]) + ")");
