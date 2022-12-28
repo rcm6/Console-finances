@@ -89,9 +89,9 @@ var finances = [
 
 //test array
 /*var finances = [
-    ['Jan-2010', 100],
-    ['Feb-2010', 200],
-    ['Mar-2010', 300]
+    ['Jan-2010', 100.035],
+    ['Feb-2010', 200.007],
+    ['Mar-2010', 300.034]
 ];*/
 
 //write JavaScript code that analyzes the records to calculate each of the following:
@@ -126,12 +126,20 @@ netTotal = netTotal + (finances[i][1])
 console.log("Total: £" + netTotal);
 
 //The average of the changes in Profit/Losses over the entire period.
-
 //You will need to track what the total change in profits is from month to month and then find the average. (Total/Number of months)
 
-// calculate average netTotal/motnhs
+//calculate average netTotal/months
 var changeAvg = (netTotal/finances.length);
-console.log ("Average Change: " + changeAvg);
+
+//Display the average
+/*console.log ("Average Change: " + changeAvg);*/
+
+//round average to 2 decimal places
+/*Math.round((num + Number.EPSILON) * 100) / 100*/
+
+//Display the average rounded to 2 decimal places
+console.log ("Average Change: £" + Math.round((changeAvg + Number.EPSILON) * 100) / 100);
+
 
 //The greatest increase in profits (date and amount) over the entire period.
 
