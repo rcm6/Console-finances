@@ -87,6 +87,13 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+//test array
+/*var finances = [
+    ['Jan-2010', 100],
+    ['Feb-2010', 200],
+    ['Mar-2010', 300]
+];*/
+
 //write JavaScript code that analyzes the records to calculate each of the following:
 
 //Start my code
@@ -94,10 +101,30 @@ console.log("Financial Analysis\n-----------------------------------");
 
 //The total number of months included in the dataset.
 
-// Display the total number of months
+//Display the total number of months
 console.log("Total months: " + finances.length);
 
 //The net total amount of Profit/Losses over the entire period.
+
+//testing array syntax
+/*console.log("test 00 " + (finances[0][0]));
+console.log("test 01 " + (finances[0][1]));
+console.log("test 10 " + (finances[1][0]));
+console.log("test 11 " + (finances[1][1]));
+console.log("test 20 " + (finances[2][0]));
+console.log("test 21 " + (finances[2][1]));*/
+
+//set netTotal variable
+var netTotal = 0;
+
+//For loop to loop through finances array
+for (i=0; i < finances.length; i++ ) {
+netTotal = netTotal + (finances[i][1])
+}
+
+//Display the net total amount of profit/losses
+console.log("Total: £" + netTotal);
+
 
 //The average of the changes in Profit/Losses over the entire period.
 
