@@ -94,6 +94,9 @@ console.log("Financial Analysis\n-----------------------------------");
 
 //The total number of months included in the dataset.
 
+// Display the total number of months
+console.log("Total months: " + finances.length);
+
 //The net total amount of Profit/Losses over the entire period.
 
 //The average of the changes in Profit/Losses over the entire period.
